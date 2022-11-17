@@ -135,6 +135,7 @@ export default function App() {
               options={breeds}
               sx={{ width: 300 }}
               onChange={handleChangeBreed}
+              value={option.breed}
               renderInput={(params) => <TextField {...params} label="Breed" />}
             />
 
@@ -144,6 +145,7 @@ export default function App() {
               options={option.breed?.subs ?? []}
               sx={{ width: 300 }}
               onChange={handleChangeSubBreed}
+              value={option.sub}
               renderInput={(params) => <TextField {...params} label="Sub-Breed" />}
             />
 

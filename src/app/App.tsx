@@ -91,7 +91,7 @@ export default function App() {
     <Container maxWidth="md">
       <Box mt={10}>
         <Paper sx={{ p: 2 }}>
-          <Button variant="contained" color="primary" sx={{ mb: 2 }} onClick={handleGenerate}>
+          <Button variant="contained" color="primary" sx={{ mb: 2 }} onClick={handleGenerate} disabled={total === 0}>
             Generate
           </Button>
 
@@ -167,7 +167,7 @@ export default function App() {
 
         <Modal open={open} onClose={handleCloseModal}>
           <Box sx={style}>
-            <ImageList sx={{ height: 450 }} cols={3} rowHeight={164}>
+            <ImageList sx={{ minWidth: 450, height: 450 }} cols={3} rowHeight={164}>
               {(loading ? Array.from(new Array(total)) : images).map((image, index) => (
                 <ImageListItem key={index}>
                   {image ? (

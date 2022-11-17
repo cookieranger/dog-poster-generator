@@ -70,6 +70,7 @@ export default function App() {
     setOption((option) => ({
       ...option,
       breed: value,
+      sub: null,
     }));
   };
 
